@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Juanita Francis</title>
+    <style>
+        html {font-family: sans-serif;}
+        body {text-align: center;}
+    </style>
+</head>
+
+<body>
+    <header><img src="MadLibs-logo.png" alt="Mad Libs Logo" width="80%" style="text-align: center; border-bottom: 10px green solid;"></header>
+    <h1>Mad Libs Lab</h1>
+    <h3>Please fill in the following blanks to complete the story.</h3>
+    <input type="text" id="landmark" placeholder="landmark">
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="color" placeholder="color">
+    <input type="text" id="verb" placeholder="verb ending in *ing*">
+    <input type= "submit" value="Submit" id="submitButton">
+    <p id="output"></p>
+
+    <script>
+        let btn = document.querySelector("#submitButton");
+        let landmark = document.querySelector("#landmark");
+        let name = document.querySelector("#name");
+        let color = document.querySelector("#color");
+        let verb = document.querySelector("#verb");
+        let message = document.querySelector("#output");
+
+        btn.addEventListener('click', function(){
+            //console.log(userFirst.value);
+            //console.log(userLast.value);
+            message.textContent = "While out walking by the " + landmark.value + " we saw " + name.value + " in a " + color.value + " suit " + verb.value + " by a tree. It was odd."
+        })
+    </script>
+</body>
+</html>
